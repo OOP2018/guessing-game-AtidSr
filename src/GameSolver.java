@@ -17,9 +17,9 @@ public class GameSolver {
 		while (!correct) {		
 			random = (int)(Math.random()*(upperBound - lowerBound)+lowerBound);
 			correct = game.guess(random);	
-			if(game.getMessage().equals("Sorry , too small")) {
+			if(game.getMessage().toLowerCase().contains("small")) {
 				lowerBound = random;
-			}else if(game.getMessage().equals("Sorry , too large")) {
+			}else if(game.getMessage().toLowerCase().contains("large")) {
 				upperBound = random;
 			}
 		
