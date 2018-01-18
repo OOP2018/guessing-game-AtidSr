@@ -4,7 +4,7 @@ import java.util.Random;
  * Game of guessing a secret number
  * 
  * @author Atid Srisukhantapuek
- * @version 2018.1.12
+ * @version 2018.1.18
  */
 public class AtidGame extends NumberGame {
 

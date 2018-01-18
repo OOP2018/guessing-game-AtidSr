@@ -1,5 +1,11 @@
 import java.util.Random;
 
+/**
+ * Solver of guessing a secret number
+ * @author Atid Srisukhantapuek
+ * @version 2018.1.18
+ */
+
 public class GameSolver {
 
 	/**
