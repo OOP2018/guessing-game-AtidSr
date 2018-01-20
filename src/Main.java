@@ -14,9 +14,8 @@ public class Main {
 		
 		//display the total guessing time
 		System.out.println("total guessing :"+game.getCount());
-		//TODO display the answer returned by play
+
 		System.out.println("The secret number is "+solution);
-		//TODO display how many guesses the user made
 		
 		
 		
