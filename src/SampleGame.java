@@ -12,7 +12,6 @@ public class SampleGame extends NumberGame {
     private int secret;
     
 	/** count guesses */
-//TODO add an attribute to count guesses
 
     /** Initialize a new default game. */
     public SampleGame()

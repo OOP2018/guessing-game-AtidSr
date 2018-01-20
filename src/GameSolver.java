@@ -1,9 +1,8 @@
-import java.util.Random;
 
 /**
  * Solver of guessing a secret number
  * @author Atid Srisukhantapuek
- * @version 2018.1.18
+ * @version 2018.1.20
  */
 
 public class GameSolver {
@@ -21,11 +20,11 @@ public class GameSolver {
 		int upperBound = game.getUpperBound();
 		int lowerBound = 1;
 		while (!correct) {		
-			random = (int)(Math.random()*(upperBound - lowerBound)+lowerBound);
+			random = lowerBound + (upperBound - lowerBound)/2;
 			correct = game.guess(random);	
-			if(game.getMessage().toLowerCase().contains("small")) {
+			if(game.getMessage().toLowerCase().contains("too small")) {
 				lowerBound = random + 1;
-			}else if(game.getMessage().toLowerCase().contains("large")) {
+			}else if(game.getMessage().toLowerCase().contains("too large")) {
 				upperBound = random - 1;
 			}else {
 				break;
