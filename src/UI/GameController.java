@@ -16,7 +16,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
+/**
+ * Controller of gussing game and counter
+ * @author Atid Srisukhantapuek
+ */
 public class GameController {
 	@FXML
 	private TextField guessTextFleld;
@@ -30,20 +33,27 @@ public class GameController {
 	private CounterView counter = new CounterView(game);
 	
 
-
+	/**
+	 *Set game and counter
+	 *@param number game
+	 * 
+	 */
 	public void setGame(NumberGame game) {
 		this.game = game;
+		counter.setCounter(game);
+
 	}
 	
 	
-	
+	/**
+	 * Show result of gussing from user input 
+	 */
 	public void enterClickHandler(ActionEvent event) {
 		int guessNum = -1;
 		String guess = "";
 		try {
 			 guess = guessTextFleld.getText().trim();
 			guessNum = Integer.parseInt(guess);
-			counter.setCounter(game);
 			boolean correct = game.guess(guessNum);
 			count.setText("count :" + game.getCount());
 			if(correct) {
@@ -69,12 +79,20 @@ public class GameController {
 		} 
 	}
 	
+	/**
+	 * Show secret number of number game 
+	 */
 	public void giveUpHandler() {
 
 		hint.setText("The secret number is "+game.getSecretNumber());
 		
 	}
 	
+	
+	/**
+	 * Rest number game 
+	 * 
+	 */
 	public void resetGame() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Correct!!");

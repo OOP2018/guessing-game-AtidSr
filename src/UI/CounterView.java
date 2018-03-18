@@ -66,6 +66,7 @@ public class CounterView implements java.util.Observer {
 		stage.show();
 		displayCount();
 	}
+	/**Set counter of Number game*/
 	public void setCounter(NumberGame game) {
 		this.counter = game;
 	}
