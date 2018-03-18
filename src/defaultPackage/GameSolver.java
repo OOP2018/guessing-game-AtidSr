@@ -1,3 +1,5 @@
+package defaultPackage;
+
 
 /**
  * Solver of guessing a secret number

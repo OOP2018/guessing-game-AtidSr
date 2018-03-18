@@ -1,3 +1,5 @@
+package defaultPackage;
+
 import java.util.Random;
 
 /**
@@ -57,4 +59,7 @@ public class AtidGame extends NumberGame {
 		return count;
 	}
 
+	public int getSecretNumber() {
+		return secret;
+	}
 }

@@ -1,3 +1,5 @@
+package defaultPackage;
+
 import java.util.Random; 
 /**
  * Example guessing game.
