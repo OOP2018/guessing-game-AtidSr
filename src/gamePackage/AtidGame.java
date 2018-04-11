@@ -43,16 +43,13 @@ public class AtidGame extends NumberGame {
 			notifyObservers();
 			setMessage("Sorry , too small");
 			return false;
-		} else if (number > secret) {
+		} else {
 			setChanged();
 			notifyObservers();
 			setMessage("Sorry , too large");
 			return false;
 		}
-		setChanged();
-		notifyObservers();
-		
-		return false;
+
 	}
 
 	/** Get the game upper bound. */
