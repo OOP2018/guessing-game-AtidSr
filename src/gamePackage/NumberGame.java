@@ -67,6 +67,7 @@ public class NumberGame extends Observable {
     }
 	/**
 	 * Get number of guessing time
+	 * @return count
 	 */
 	public int getCount() {
 		return 0;
@@ -74,8 +75,17 @@ public class NumberGame extends Observable {
 	
 	/**
 	 * Get secret number
+	 * @return secret number
 	 */
 	public int getSecretNumber() {
+		return 0;
+	}
+	
+	/**
+	 * Get guess number
+	 * @return guess number
+	 */
+	public int getGuess() {
 		return 0;
 	}
 	

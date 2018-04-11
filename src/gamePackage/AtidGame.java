@@ -13,6 +13,7 @@ public class AtidGame extends NumberGame {
 	private int upperBound;
 	private int secret;
 	private int count;
+	private int guess;
 
 	public AtidGame(int upperBound) {
 		this.upperBound = upperBound;
@@ -31,6 +32,7 @@ public class AtidGame extends NumberGame {
 	 */
 	public boolean guess(int number) {
 		count += 1;
+		guess = number;
 		if (this.secret == number) {
 			setMessage("Correct! The secret number is " + secret);
 			return true;
@@ -50,16 +52,35 @@ public class AtidGame extends NumberGame {
 		return upperBound;
 	}
 
+    /**
+     * toString describes the game or problem.
+     * @return description of this game or the problem to be solved.
+     */
 	@Override
 	public String toString() {
 		return "Gussing Number";
 	}
 
+	/**
+	 * Get number of guessing time
+	 * @return count
+	 */
 	public int getCount() {
 		return count;
 	}
 
+	/**
+	 * Get secret number
+	 * @return secret number
+	 */
 	public int getSecretNumber() {
 		return secret;
+	}
+	/**
+	 * Get guess number
+	 * @return guess number
+	 */
+	public int getGuess() {
+		return guess;
 	}
 }

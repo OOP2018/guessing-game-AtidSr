@@ -30,7 +30,8 @@ public class GameController {
 	private Label count;
 	private NumberGame game;
 	private CounterView counter = new CounterView(game);
-	
+	private GuessView guessView = new GuessView(game);
+
 
 	/**
 	 *Set game and counter
@@ -40,6 +41,7 @@ public class GameController {
 	public void setGame(NumberGame game) {
 		this.game = game;
 		counter.setCounter(game);
+		guessView.setCounter(game);
 	}
 	
 	
@@ -67,6 +69,7 @@ public class GameController {
 			
 			game.addObserver(counter);
 			counter.run();
+			guessView.run();
 			
 		} catch (NumberFormatException e) {
 
