@@ -1,4 +1,4 @@
-package defaultPackage;
+package gamePackage;
 
 /**
  * A main class for the GuessingGame.

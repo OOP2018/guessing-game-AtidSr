@@ -2,9 +2,8 @@ package UI;
 	
 import java.net.URL;
 
-import counter.Counter;
-import defaultPackage.AtidGame;
-import defaultPackage.NumberGame;
+import gamePackage.AtidGame;
+import gamePackage.NumberGame;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
@@ -24,7 +23,6 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		// Create the Counter object (the "model" part of our app)
 		NumberGame game = new AtidGame(100);
 
 		try {
@@ -33,21 +31,12 @@ public class Main extends Application {
 				System.out.println("Couldn't find file: GameUI.fxml");
 				Platform.exit();
 			}
-			// Load the FXML and get reference to the loader
 			FXMLLoader loader = new FXMLLoader(url);
-			// Create the UI. This will instantiate the controller object, too.
 			Parent root = loader.load();
-			// Now we can get the controller object from the FXMLloader.
-			// This is interesting -- we don't need to use a cast!
 			GameController controller = loader.getController();
-			
-			// Dependency Injection:
-			// Set the Counter object we want the view to update.
+
 			controller.setGame(game);
 
-			//TODO set a reference to Counter in the controller
-
-			// Build and show the scene
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.sizeToScene();

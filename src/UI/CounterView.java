@@ -2,6 +2,7 @@ package UI;
 
 import java.util.Observable;
 
+import gamePackage.NumberGame;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -9,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import defaultPackage.NumberGame;
 
 /**
  * A Controller for a window that shows the value of a Counter.

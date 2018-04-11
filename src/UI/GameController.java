@@ -4,9 +4,8 @@ package UI;
 
 import java.util.Optional;
 
-import counter.Counter;
-import defaultPackage.AtidGame;
-import defaultPackage.NumberGame;
+import gamePackage.AtidGame;
+import gamePackage.NumberGame;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +40,7 @@ public class GameController {
 	public void setGame(NumberGame game) {
 		this.game = game;
 		counter.setCounter(game);
-
+		game.addObserver(counter);
 	}
 	
 	
