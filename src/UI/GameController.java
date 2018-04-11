@@ -40,7 +40,6 @@ public class GameController {
 	public void setGame(NumberGame game) {
 		this.game = game;
 		counter.setCounter(game);
-		game.addObserver(counter);
 	}
 	
 	
@@ -68,8 +67,9 @@ public class GameController {
 			
 			game.addObserver(counter);
 			counter.run();
+			
 		} catch (NumberFormatException e) {
-			// TODO: handle exception
+
 			 Alert alert = new Alert(Alert.AlertType.INFORMATION);
 	            alert.setTitle("Error ");
 	            alert.setHeaderText("Invalid input!!");
