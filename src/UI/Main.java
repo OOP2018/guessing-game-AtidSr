@@ -46,6 +46,14 @@ public class Main extends Application {
 			e.printStackTrace();
 			return;
 		}
+		
+//		GuessView guess = new GuessView(game);
+//		game.addObserver(guess);
+//		guess.run();
+//		
+//		CounterView counter = new CounterView(game);
+//		game.addObserver(counter);
+//		counter.run();
 
 
 	}

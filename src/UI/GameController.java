@@ -29,7 +29,7 @@ public class GameController {
 	@FXML
 	private Label count;
 	private NumberGame game;
-	private CounterView counterView = new CounterView(game);
+	private CounterView counterView = new CounterView(game); 
 	private GuessView guessView = new GuessView(game);
 
 
@@ -43,7 +43,7 @@ public class GameController {
 		counterView.setCounter(game);
 		guessView.setCounter(game);
 	}
-	
+
 	
 	/**
 	 * Show result of gussing from user input 
@@ -52,7 +52,7 @@ public class GameController {
 		int guessNum = -1;
 		String guess = "";
 		try {
-			 guess = guessTextFleld.getText().trim();
+			guess = guessTextFleld.getText().trim();
 			guessNum = Integer.parseInt(guess);
 			boolean correct = game.guess(guessNum);
 			count.setText("count :" + game.getCount());

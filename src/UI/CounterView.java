@@ -71,6 +71,7 @@ public class CounterView implements java.util.Observer {
 		this.counter = game;
 	}
 	
+	/**Display count number*/
 	public void displayCount() {
 		label.setText( String.format("%2d", counter.getCount()) );
 	}

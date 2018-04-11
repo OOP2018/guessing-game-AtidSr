@@ -71,6 +71,7 @@ public class GuessView implements java.util.Observer {
 		this.counter = game;
 	}
 	
+	/**Display guess number*/
 	public void displayGuess() {
 		label.setText( String.format("%2d", counter.getGuess()) );
 	}

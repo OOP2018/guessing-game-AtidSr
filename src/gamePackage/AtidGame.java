@@ -34,16 +34,24 @@ public class AtidGame extends NumberGame {
 		count += 1;
 		guess = number;
 		if (this.secret == number) {
+			setChanged();
+			notifyObservers();
 			setMessage("Correct! The secret number is " + secret);
 			return true;
 		} else if (number < secret) {
+			setChanged();
+			notifyObservers();
 			setMessage("Sorry , too small");
 			return false;
 		} else if (number > secret) {
+			setChanged();
+			notifyObservers();
 			setMessage("Sorry , too large");
 			return false;
 		}
-
+		setChanged();
+		notifyObservers();
+		
 		return false;
 	}
 
