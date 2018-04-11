@@ -29,7 +29,7 @@ public class GameController {
 	@FXML
 	private Label count;
 	private NumberGame game;
-	private CounterView counter = new CounterView(game);
+	private CounterView counterView = new CounterView(game);
 	private GuessView guessView = new GuessView(game);
 
 
@@ -40,7 +40,7 @@ public class GameController {
 	 */
 	public void setGame(NumberGame game) {
 		this.game = game;
-		counter.setCounter(game);
+		counterView.setCounter(game);
 		guessView.setCounter(game);
 	}
 	
@@ -67,8 +67,10 @@ public class GameController {
 				guessTextFleld.clear();
 				}
 			
-			game.addObserver(counter);
-			counter.run();
+			game.addObserver(counterView);
+			counterView.run();
+			
+			game.addObserver(guessView);
 			guessView.run();
 			
 		} catch (NumberFormatException e) {
@@ -103,7 +105,8 @@ public class GameController {
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == ButtonType.OK){
 			game = new AtidGame(100);
-			counter.setCounter(game);
+			counterView.setCounter(game);
+			guessView.setCounter(game);
 			hint.setText("");
 			guessTextFleld.setEditable(true);
 
